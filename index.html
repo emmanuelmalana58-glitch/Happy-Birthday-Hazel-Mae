@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Happy Birthday, Hazel! 🌺</title>
+  <meta name="description" content="A little Ohana birthday celebration for Hazel.">
+  <meta property="og:title" content="Happy Birthday, Hazel! 🌺">
+  <meta property="og:description" content="Ohana means family. Come celebrate!">
+  <meta property="og:image" content="images/photo1.jpg">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌺</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="locked">
+  <div class="welcome" id="welcome" role="dialog" aria-label="Welcome">
+    <div class="welcome-card">
+      <div class="gift">🎁</div>
+      <h2>A surprise for <span id="wName">Hazel</span>!</h2>
+      <p>Turn your sound on 🔊 and tap the button to open it.</p>
+      <button class="btn" id="openBtn">🌺 Open your gift</button>
+    </div>
+  </div>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+  <div class="stars" id="stars" aria-hidden="true"></div>
+
+  <nav class="nav">
+    <a href="#top" class="logo">🌺 Hazel</a>
+    <div class="links">
+      <a href="#memories">Memories</a>
+      <a href="#letter">Letter</a>
+      <a href="#ohana">Ohana</a>
+      <a href="#wishes">Wishes</a>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="hero-text">
+      <p class="eyebrow">✨ A little birthday message from the galaxy ✨</p>
+      <h1>Happy Birthday,<br><span id="name">Hazel</span>!</h1>
+      <p class="tagline" id="tagline">Ohana means family. And you're one of ours. 💙</p>
+      <div class="countdown" id="countdown" hidden>
+        <div><b id="cd-d">0</b><span>days</span></div>
+        <div><b id="cd-h">0</b><span>hours</span></div>
+        <div><b id="cd-m">0</b><span>mins</span></div>
+        <div><b id="cd-s">0</b><span>secs</span></div>
+      </div>
+      <button class="btn" id="party">🎉 Let's party!</button>
+    </div>
+    <div class="hero-photo">
+      <div class="blob"></div>
+      <img src="images/photo1.jpg" alt="Hazel smiling with two ube ice cream cones" class="main-img">
+      <span class="sticker s1">🌺</span>
+      <span class="sticker s2">⭐</span>
+      <span class="sticker s3">🛸</span>
+    </div>
+    <a href="#memories" class="scroll" aria-label="Scroll down">↓</a>
+  </header>
+
+  <section id="memories" class="section">
+    <h2>Our Favourite Memories</h2>
+    <p class="sub">A little trip through the good times. Tap a photo to see it bigger.</p>
+    <div class="gallery" id="gallery"></div>
+  </section>
+
+  <section id="letter" class="section">
+    <h2>A Letter For You</h2>
+    <p class="sub">Tap the envelope to open it 💌</p>
+    <div class="envelope-wrap">
+      <button class="envelope" id="envelope" aria-expanded="false" aria-controls="paper">
+        <span class="env-back"></span>
+        
+        <span class="env-front"></span>
+        <span class="env-flap"></span>
+        <span class="env-seal">🌺</span>
+      </button>
+      <article class="paper" id="paper" hidden>
+        <h3 id="letterTitle"></h3>
+        <div id="letterBody"></div>
+        <p class="sign" id="letterSign"></p>
+      </article>
+    </div>
+  </section>
+
+  <section id="ohana" class="section ohana">
+    <div class="ohana-card">
+      <div class="big">“Ohana means family.”</div>
+      <p>Family means nobody gets left behind or forgotten. Thank you for being the kind of friend who makes every little hangout (ice cream, burgers, silly selfies) feel like a whole adventure.</p>
+      <div class="facts">
+        <div><b>💙</b><span>Kind-hearted</span></div>
+        <div><b>🌺</b><span>Always lovely</span></div>
+        <div><b>⭐</b><span>One of a kind</span></div>
+        <div><b>🍦</b><span>Ice cream lover</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="wishes" class="section">
+    <h2>Birthday Wishes</h2>
+    <p class="sub">Tap a star to open a wish.</p>
+    <div class="wishes" id="starRow"></div>
+    <div class="wish-box" id="wishBox" aria-live="polite">Pick a star ⭐</div>
+  </section>
+
+  <footer>
+    <p>Made with 💙 for Hazel · Ohana forever 🌺</p>
+  </footer>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="close" id="lbClose" aria-label="Close">✕</button>
+    <button class="nav-btn prev" id="lbPrev" aria-label="Previous">‹</button>
+    <figure>
+      <img id="lbImg" alt="">
+      <figcaption id="lbCap"></figcaption>
+    </figure>
+    <button class="nav-btn next" id="lbNext" aria-label="Next">›</button>
+  </div>
+
+  <audio id="bgm" src="audio/music.mp3" loop preload="auto"></audio>
+  <button class="music" id="music" aria-label="Toggle music" aria-pressed="false">🎵</button>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
